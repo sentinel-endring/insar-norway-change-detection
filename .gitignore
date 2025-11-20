@@ -1,0 +1,14 @@
+output/
+file_mapping.json
+Basisdata_0000_Norge_5973_FKB-Tiltak2023_FGDB/
+Basisdata_0000_Norge_5973_FKB-Tiltak2024_FGDB/
+Basisdata_0000_Norge_5973_FKB-Tiltak2023_FGDB.zip
+Basisdata_0000_Norge_5973_FKB-Tiltak2024_FGDB.zip
+senbygg_temporal_change_map.tif
+binary_detection.tif
+visualizations/
+change_detection_results.csv
+
+# MkDocs
+site/
+.cache/

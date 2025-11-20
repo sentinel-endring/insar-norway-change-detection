@@ -1,0 +1,15 @@
+pandas>=2.2
+numpy>=1.26
+requests>=2.31
+pyproj>=3.6
+tqdm>=4.66
+psutil>=5.9
+matplotlib>=3.8
+flask>=2.3
+geopandas>=0.14
+shapely>=2.0
+fiona>=1.9
+pathlib
+typing
+rasterio
+gdal

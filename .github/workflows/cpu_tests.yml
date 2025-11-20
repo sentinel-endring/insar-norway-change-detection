@@ -1,0 +1,50 @@
+name: CPU Tests
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Updated to v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5 # Updated to v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-add-repository ppa:ubuntugis/ubuntugis-unstable
+          sudo apt-get update
+          sudo apt-get install gdal-bin libgdal-dev
+          python -m pip install --upgrade pip
+          pip install GDAL==`gdal-config --version`
+          pip install -r requirements.txt
+
+      - name: Create test data directory
+        run: mkdir test_data
+
+      - name: Run insar-query.py
+        run: |
+          python insar-query.py --path test_data --bbox="7.986722817,58.149864623,7.991700669,58.146240529" --period 2019-2023
+          find test_data -name state.json -print -quit | grep -q . || (echo "state.json not found in test_data subdirectories" && exit 1)
+
+      - name: Run hybrid_detector.py
+        run: |
+          python hybrid_detector.py --path test_data --cpu-threads 2 --maximum
+          test -f change_detection_results.csv && test -f file_mapping.json || (echo "Detector output files not found" && exit 1)
+
+      - name: Run insar-visualizer.py
+        run: |
+          python insar-visualizer.py --results change_detection_results.csv --num-points 2 --output-dir visualizations_output --selection mixed
+          test -d visualizations_output && test -n "$(find visualizations_output -maxdepth 1 -name '*.png' -print -quit)" || (echo "Visualization output not found" && exit 1)

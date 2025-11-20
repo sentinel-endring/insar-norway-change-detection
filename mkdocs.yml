@@ -1,0 +1,95 @@
+site_name: InSAR Norway Change Detection
+site_description: Python toolkit for analyzing InSAR data from the Norwegian Ground Motion Service
+site_author: InSAR Norway Change Detection Team
+site_url: https://ferdinandklingenberg.github.io/insar-norway-change-detection
+
+repo_name: insar-norway-change-detection
+repo_url: https://github.com/FerdinandKlingenberg/insar-norway-change-detection
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+
+nav:
+  - Home: index.md
+  - Workflow: workflow.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quick-start.md
+  - User Guide:
+    - Querying Data: user-guide/querying-data.md
+    - Processing Data: user-guide/processing-data.md
+    - Visualization: user-guide/visualization.md
+  - Advanced:
+    - GPU Processing: advanced/gpu-processing.md
+    - API Reference: advanced/api-reference.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      auto_title: true
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - social
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FerdinandKlingenberg/insar-norway-change-detection
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
+
+extra_css:
+  - https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.css
+
+copyright: Copyright &copy; 2025 Torgeir Ferdinand Klingenberg
