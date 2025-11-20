@@ -4,7 +4,7 @@ site_author: InSAR Norway Change Detection Team
 site_url: https://sentinel-endring.github.io/insar-norway-change-detection
 
 repo_name: insar-norway-change-detection
-repo_url: https://sentinel-endring.github.io/insar-norway-change-detection/
+repo_url: https://github.com/sentinel-endring/insar-norway-change-detection/
 
 theme:
   name: material
@@ -84,7 +84,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://sentinel-endring.github.io/insar-norway-change-detection/
+      link: https://github.com/sentinel-endring/insar-norway-change-detection/
 
 extra_javascript:
   - https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
