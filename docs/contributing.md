@@ -25,7 +25,7 @@ Help make the toolkit more accessible:
 #### Getting Started
 ```bash title="Set up development environment"
 # Clone the repository
-git clone https://github.com/FerdinandKlingenberg/insar-norway-change-detection.git
+git clone https://github.com/sentinel-endring/insar-norway-change-detection.git
 cd insar-norway-change-detection
 
 # Create development environment
@@ -155,4 +155,4 @@ All contributors are recognized in our project documentation. Significant contri
 
 ---
 
-**Ready to contribute?** Check out our [open issues](https://github.com/FerdinandKlingenberg/insar-norway-change-detection/issues) for good first contributions!
+**Ready to contribute?** Check out our [open issues](https://github.com/sentinel-endring/insar-norway-change-detection/issues) for good first contributions!

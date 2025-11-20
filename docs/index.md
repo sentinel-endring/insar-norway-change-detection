@@ -42,3 +42,6 @@ The analysis process follows three main steps:
 ## About
 
 This project uses data from the Norwegian Ground Motion Service (insar.ngu.no) and is built with open-source libraries including NumPy, Pandas, Flask, GeoPandas, Rasterio, and Matplotlib.
+
+## Acknowledgments
+This work has been partly funded by the Norwegian Space Agency, contract number 74CO2504.

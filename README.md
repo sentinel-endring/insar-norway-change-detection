@@ -153,6 +153,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
-
--   Norwegian Ground Motion Service (insar.ngu.no) for providing the InSAR data.
--   The developers of the many open-source libraries used in this project, including NumPy, Pandas, Flask, GeoPandas, Rasterio, and Matplotlib.
+This work has been partly funded by the Norwegian Space Agency, contract number 74CO2504.
+This work would not been possible without Norwegian Ground Motion Service (insar.ngu.no) for providing the InSAR data.

@@ -1,10 +1,10 @@
 site_name: InSAR Norway Change Detection
 site_description: Python toolkit for analyzing InSAR data from the Norwegian Ground Motion Service
 site_author: InSAR Norway Change Detection Team
-site_url: https://ferdinandklingenberg.github.io/insar-norway-change-detection
+site_url: https://sentinel-endring.github.io/insar-norway-change-detection
 
 repo_name: insar-norway-change-detection
-repo_url: https://github.com/FerdinandKlingenberg/insar-norway-change-detection
+repo_url: https://sentinel-endring.github.io/insar-norway-change-detection/
 
 theme:
   name: material
@@ -84,7 +84,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/FerdinandKlingenberg/insar-norway-change-detection
+      link: https://sentinel-endring.github.io/insar-norway-change-detection/
 
 extra_javascript:
   - https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js

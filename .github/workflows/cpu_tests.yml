@@ -39,9 +39,9 @@ jobs:
           python insar-query.py --path test_data --bbox="7.986722817,58.149864623,7.991700669,58.146240529" --period 2019-2023
           find test_data -name state.json -print -quit | grep -q . || (echo "state.json not found in test_data subdirectories" && exit 1)
 
-      - name: Run hybrid_detector.py
+      - name: Run hybrid_detector-cpu.py
         run: |
-          python hybrid_detector.py --path test_data --cpu-threads 2 --maximum
+          python hybrid_detector-cpu.py --path test_data --cpu-threads 2 --maximum
           test -f change_detection_results.csv && test -f file_mapping.json || (echo "Detector output files not found" && exit 1)
 
       - name: Run insar-visualizer.py
